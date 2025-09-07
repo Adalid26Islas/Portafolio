@@ -29,7 +29,7 @@ export default function AboutMe() {
         {/* Imagen con bordes redondeados + sombra neón */}
         <div className="flex justify-center">
           <img
-            src="../../src/assets/certs/adalid.png"
+            src="public\Adalid.png"
             alt="Foto de Adalid Islas Quintero"
             className="w-80 h-200 object-cover rounded-2xl shadow-[0_0_10px_2px_rgba(0,255,255,0.7)]"
           />
