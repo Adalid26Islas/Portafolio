@@ -3,7 +3,7 @@ import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
 import OperatingSystems from "./components/OperatingSystems";
 import Courses from "./components/Courses";
-import Timeline from "./components/Expirience";
+import Timeline from "./components/Experience";
 import Tools from "./components/Tools";
 import Footer from "./components/Footer";
 
