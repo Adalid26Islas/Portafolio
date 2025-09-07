@@ -39,13 +39,16 @@ export default function Timeline() {
   ];
 
   return (
-    <section id="timeline" className="bg-gray-900 text-white py-16">
-      <div className="relative w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section
+      id="timeline"
+      className="bg-gray-900 text-white pt-[20px] scroll-mt-[120px]"
+    >
+      <div className="relative w-full md:w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Línea central */}
         <div className="hidden md:block absolute left-1/2 top-0 w-1 h-full bg-cyan-300 transform -translate-x-1/2"></div>
 
         {/* Educación - izquierda */}
-        <div className="space-y-8 text-right">
+        <div className="space-y-8 text-center md:text-right">
           <h3 className="text-4xl font-bold mb-4 text-cyan-300">Educación</h3>
           {education.map((item, idx) => (
             <div key={idx} className="relative md:pr-8">
@@ -59,7 +62,7 @@ export default function Timeline() {
         </div>
 
         {/* Experiencia - derecha */}
-        <div className="space-y-8 text-left">
+        <div className="space-y-8 text-center md:text-left">
           <h3 className="text-4xl font-bold mb-4 text-cyan-300">Experiencia</h3>
           {experience.map((item, idx) => (
             <div key={idx} className="relative md:pl-8">

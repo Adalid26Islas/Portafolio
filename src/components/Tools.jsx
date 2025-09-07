@@ -16,18 +16,19 @@ export default function Tools() {
   ];
 
   return (
-    <section id="tools" className="bg-gray-950 text-white py-16">
-      <h2 className="text-5xl font-bold mb-12 text-cyan-300 text-center">
+    <section id="tools" className="bg-gray-950 text-white py-16 px-4 md:px-0 scroll-mt-[120px]">
+      <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-cyan-300 text-center">
         Herramientas Utilizadas
       </h2>
-      <div className="flex flex-wrap justify-center gap-4 w-1/2 mx-auto">
+
+      <div className="flex flex-wrap justify-center gap-4 w-full md:w-1/2 mx-auto">
         {tools.map((tool, idx) => (
           <a
             key={idx}
             href={tool.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-900 px-6 py-3 rounded-full shadow-md hover:shadow-[0_0_15px_2px_rgba(0,255,255,0.6)] transition text-center hover:text-cyan-300"
+            className="bg-gray-900 px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md hover:shadow-[0_0_15px_2px_rgba(0,255,255,0.6)] transition text-center hover:text-cyan-300 text-sm sm:text-base"
           >
             {tool.name}
           </a>

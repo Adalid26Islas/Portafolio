@@ -28,25 +28,25 @@ export default function Courses() {
 
   const closeModal = () => {
     setShowModal(false);
-    // Espera la animación de salida antes de remover la imagen
     setTimeout(() => setSelectedCert(null), 300);
   };
 
   return (
-    <section id="courses" className="bg-gray-900 text-white py-16">
-      <h2 className="text-5xl font-bold mb-12 text-cyan-300 text-center">
-        Cursos Realizados
+    <section id="courses" className="bg-gray-900 text-white py-16 pt-[120px] scroll-mt-[120px] px-4 md:px-0">
+      <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-cyan-300 text-center">
+        Cursos y certificaciones
       </h2>
+
       <div className="flex justify-center">
-        {/* Contenedor ajustado al 50% del ancho */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 w-1/2 mx-auto">
+        {/* Contenedor responsive */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 w-full md:w-1/2 mx-auto">
           {courses.map((course) => (
             <div
               key={course.name}
               onClick={() => openModal(course.img)}
-              className="cursor-pointer bg-gray-950 p-6 rounded-xl shadow-md hover:shadow-[0_0_20px_2px_rgba(0,255,255,0.6)] transition flex flex-col items-center"
+              className="cursor-pointer bg-gray-950 p-6 sm:p-8 rounded-xl shadow-md hover:shadow-[0_0_20px_2px_rgba(0,255,255,0.6)] transition flex flex-col items-center"
             >
-              <h3 className="text-xl font-semibold mb-2 text-center">{course.name}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 text-center">{course.name}</h3>
               <p className="text-gray-300 text-center">{course.certifier}</p>
             </div>
           ))}
@@ -65,7 +65,7 @@ export default function Courses() {
             className={`bg-gray-950 p-4 rounded-lg max-w-[90%] max-h-[90%] transform transition-all duration-300 ${
               showModal ? "scale-100 opacity-100" : "scale-90 opacity-0"
             }`}
-            onClick={(e) => e.stopPropagation()} // Evita que al hacer clic en la imagen se cierre
+            onClick={(e) => e.stopPropagation()}
           >
             <img
               src={selectedCert}
